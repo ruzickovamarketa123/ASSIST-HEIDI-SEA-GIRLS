@@ -3,15 +3,18 @@
 #include <BLEDevice.h>   // Native BLE
 #include <BLESecurity.h> // Native BLE Security
 
-BleKeyboard bleKeyboard("Selfie Stick", "Espressif", 100);
+BleKeyboard bleKeyboard("Selfie Stick Alina", "Espressif", 100);
 
-const int buttonPin = 0; // BOOT button on ESP32-S3-DevKitC-1
+const int buttonPin = 33; // Button 1
+const int buttonPin2 = 32; // Button 2
 int lastButtonState = HIGH;
+int lastButtonState2 = HIGH;
 
 void setup()
 {
   Serial.begin(115200);
   pinMode(buttonPin, INPUT_PULLUP);
+  pinMode(buttonPin2, INPUT_PULLUP);
 
   Serial.println("Starting Native Bluetooth Keyboard...");
 
@@ -38,15 +41,27 @@ void loop()
   {
     int currentButtonState = digitalRead(buttonPin);
 
-    // Check if the BOOT button was just pressed
+    // Check if Button 1 was just pressed
     if (currentButtonState == LOW && lastButtonState == HIGH)
     {
-      Serial.println("BOOT button pressed! Triggering shutter...");
+      Serial.println("Button 1 pressed! Triggering shutter...");
       bleKeyboard.write(KEY_MEDIA_VOLUME_UP);
       delay(200);
     }
 
     lastButtonState = currentButtonState;
+
+    int currentButtonState2 = digitalRead(buttonPin2);
+
+    // Check if Button 2 was just pressed
+    if (currentButtonState2 == LOW && lastButtonState2 == HIGH)
+    {
+      Serial.println("Button 2 pressed! Triggering shutter...");
+      bleKeyboard.write(KEY_MEDIA_MUTE);
+      delay(200);
+    }
+
+    lastButtonState2 = currentButtonState2;
   }
   delay(10);
-}
+} 
