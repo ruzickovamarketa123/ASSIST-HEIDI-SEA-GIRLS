@@ -132,10 +132,6 @@ The Seagirls team designed and built a **two-part assistive technology solution*
 | Estimated print time | ~3 hours 30 minutes |
 | CAD tool | Onshape |
 
-CAD files are available on Onshape:
-- [Remote enclosure](https://cad.onshape.com/documents/0b6fb212b79f42c29ad16602/)
-- [Button caps](https://cad.onshape.com/documents/94e022fe4d6fa302c492216f/w/ed2f0a4f99ac6465352d92ab/e/22765c5e61bea228afda956b)
-
 STL files for printing are also included in the [`design/`](design/) folder of this repository.
 
 ### Microcontroller and Electronics
@@ -146,9 +142,6 @@ The remote controller is based on the **Adafruit Feather V4**, which includes:
 - USB-C port for charging and programming
 
 Two tactile push buttons are wired to GPIO pins of the microcontroller. The LiPo battery (3.7V, 800mAh) connects directly to the JST connector on the Feather V4. All electronics are housed inside the openable 3D-printed enclosure.
-
-<!-- TODO: Insert simplified wiring diagram here -->
-<!-- ![Wiring diagram](docs/wiring-diagram.png) -->
 
 ### Firmware
 
