@@ -153,7 +153,7 @@ Two tactile push buttons are wired to GPIO pins of the microcontroller. The LiPo
 | Button 1 — Shutter | Triggers photo capture or starts/stops video recording |
 | Button 2 — Mode | Toggles between photo and video mode |
 
-Firmware source code is located in the [`firmware/`](firmware/) folder.
+Firmware source code is located in the [`code`](code/) folder.
 
 ### Assembly Steps
 
