@@ -97,8 +97,7 @@ The Seagirls team designed and built a **two-part assistive technology solution*
 | Button 1 — Shutter | Take photo / Start–Stop video recording | Main trigger button |
 | Button 2 — Mode | Switch between photo and video mode | Toggle function |
 
-<!-- TODO: Insert photo or sketch of control layout here -->
-<!-- ![Control layout](docs/photos/controls.jpg) -->
+[Control layout](docs/photos/controls.jpg) 
 
 ---
 
